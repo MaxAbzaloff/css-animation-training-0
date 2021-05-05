@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            margin: 50px;
+            animation: test 4s linear 0s,
+            test2 3s linear 3s infinite;
+        }
+
+        #box:hover {
+            animation: test 4s linear 0s;
+        }
+
+        @keyframes test {
+            0% {
+                width: 400px;
+            }
+            20%, 80% {
+                height: 400px;
+            }
+            50% {
+                width: 100px;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+        @keyframes test2 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
